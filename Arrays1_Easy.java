@@ -47,7 +47,7 @@ class Solution {
 }
 */
 
-/**** Q4.REMOVE DUPLICATES FROM SORTED ARRAY ****/
+/**** Q4. REMOVE DUPLICATES FROM SORTED ARRAY ****/
 /*
 class Solution {
     public int removeDuplicates(int[] nums) {
@@ -62,3 +62,77 @@ class Solution {
     }
 }
 */
+
+/**** Q5. LEFT ROTATE AN ARRAY BY ONE-PLACE ****/
+/*
+class Solution {
+    public void rotateArrayByOne(int[] nums) {
+        int temp = nums[0];
+        int n = nums.length;
+        for(int i=1; i<n; i++){
+            nums[i-1] = nums[i];
+        }
+        nums[n-1] = temp;
+    }
+}
+*/
+
+/***** Q6. LEFT ROTATE AN ARRAY BY D-PLACE ******/
+/*
+class Solution {
+    public void rotateArray(int[] nums, int k) {
+       int n = nums.length;
+       k = k % n;
+       int temp[] = new int[n];
+       for(int i = 0; i<k; i++){
+        temp[i] = nums[i];
+       }
+       for(int i=k; i<n; i++){
+        nums[i-k] = nums[i];
+       }
+       for(int i=n-k; i<n; i++){
+        nums[i] = temp[i-(n-k)];
+       }
+    }
+}
+*/
+
+/**** Q7. MOVE ZERO TO END ******/
+/*
+class Solution {
+    public void moveZeroes(int[] nums) {
+        int n = nums.length;
+        int temp[] = new int[n];
+        int index = 0;
+        for(int i=0; i<n; i++){
+            if(nums[i] != 0){
+                temp[index] = nums[i];
+                index++;
+            }
+        }
+        for(int i=0; i<n; i++){
+            nums[i] = temp[i];
+        }
+    }
+}
+*/
+
+/**** Q8. LINEAR SEARCH ********/
+/*
+class Solution {
+    public int linearSearch(int nums[], int target) {
+                //Your code goes here
+    for(int i=0; i<nums.length; i++){
+      if(nums[i] == target) {
+        return i;
+      }
+    }
+    return -1;
+    }
+}
+*/
+
+/**** Q9. FIND THE UNION *******/
+/*
+
+ */
